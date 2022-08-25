@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
+        <script>
+            const beamsClient = new PusherPushNotifications.Client({
+                instanceId: '5df9ab8b-7f01-4cb3-902a-53c429a4132f',
+            });
+
+            beamsClient.start()
+                .then(() => beamsClient.addDeviceInterest('hello'))
+                .then(() => console.log('Successfully registered and subscribed!'))
+                .catch(console.error);
+        </script>
+    </head>
+</html>
